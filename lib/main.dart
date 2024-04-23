@@ -1,6 +1,7 @@
 import 'package:daily_exercises/constants.dart';
 import 'package:daily_exercises/screens/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 void main() => runApp(const MyApp());
@@ -15,9 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Meditation App',
       theme: ThemeData(
-        fontFamily: "Cairo",
+        textTheme: GoogleFonts.acmeTextTheme(Theme.of(context).textTheme.apply(displayColor: kTextColor)),
         scaffoldBackgroundColor: kBackgroundColor,
-        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: const HomePage(),
     );
